@@ -1,0 +1,83 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      scroll-behavior: smooth;
+      background: var(--site-bg-bottom);
+    }
+    body {
+      position: relative;
+      min-height: 100vh;
+      isolation: isolate;
+      background: var(--site-bg-bottom);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* GLOBAL SITE BACKGROUND */
+    .site-background {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      min-height: 100%;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, var(--site-bg-top) 0%, var(--site-bg-middle) 55%, rgba(6,10,18,0) 100%) top / 100% 780px no-repeat,
+        linear-gradient(180deg, var(--site-bg-lower) 0%, var(--site-bg-middle) 46%, var(--site-bg-bottom) 100%);
+    }
+    .site-background::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse at center, transparent 58%, rgba(2,5,11,.2) 100%),
+        linear-gradient(180deg, transparent 86%, rgba(2,5,11,.26) 100%),
+        linear-gradient(var(--site-grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--site-grid-color) 1px, transparent 1px);
+      background-size: auto, auto, 64px 64px, 64px 64px;
+    }
+    .site-background::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: .016;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.65'/%3E%3C/svg%3E");
+      mix-blend-mode: soft-light;
+    }
+    .site-content {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+    h1 { font-size: clamp(38px, 5.5vw, 68px); }
+    h2 { font-size: clamp(30px, 4vw, 50px); }
+    h3 { font-size: 19px; }
+    a { text-decoration: none; color: inherit; }
+
+    .hero-title,
+    #cta-title {
+      text-shadow: var(--hero-depth-shadow);
+    }
+    #services-title,
+    #process-title,
+    #work-title,
+    #reviews-title,
+    #pricing-title,
+    #team-title,
+    #faq-title {
+      text-shadow: var(--heading-depth-shadow);
+    }
+    .hero-title em,
+    .services-title-accent {
+      text-shadow: var(--accent-depth-shadow);
+    }
+    .proof-value { text-shadow: var(--stat-depth-shadow); }
