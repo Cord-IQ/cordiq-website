@@ -1,693 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CordIQ — Custom Discord Bot Development</title>
-  <meta name="description" content="Custom Discord bots built exactly the way your server needs. 50+ bots delivered across every niche. Starter from $299."/>
-  <meta property="og:title" content="CordIQ — Custom Discord Bot Development"/>
-  <meta property="og:description" content="Custom Discord bots built exactly the way your server needs. 50+ bots delivered. Starter from $299."/>
-  <meta property="og:type" content="website"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/tokens.css"/>
-  <link rel="stylesheet" href="assets/css/base.css"/>
-  <link rel="stylesheet" href="assets/css/components.css"/>
-  <link rel="stylesheet" href="assets/css/sections.css"/>
-  <link rel="stylesheet" href="assets/css/responsive.css"/>
-  <link rel="stylesheet" href="assets/css/refinements.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <title>CordIQ | Custom Discord Systems</title>
+  <meta name="description" content="Custom Discord bots, automation, moderation, and integrations built around how your community operates.">
+  <meta property="og:title" content="CordIQ | Custom Discord Systems">
+  <meta property="og:description" content="Reliable Discord infrastructure designed for real community operations.">
+  <meta property="og:type" content="website">
+  <link rel="preload" as="image" href="assets/images/v2/hero-infrastructure.png">
+  <link rel="stylesheet" href="assets/css/site-v2.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<div class="site-background" aria-hidden="true"></div>
-<div class="site-content">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#top" class="nav-brand" aria-label="CordIQ home">
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="CordIQ home">
       <img src="assets/images/logo/primary_wordmark_light.png" alt="CordIQ" width="880" height="200">
     </a>
-    <div class="nav-links" aria-label="Primary navigation">
-      <a href="#services" class="nav-link" data-section="services">Services</a>
-      <a href="#process" class="nav-link" data-section="process">Process</a>
-      <a href="#work" class="nav-link" data-section="work">Work</a>
-      <a href="#reviews" class="nav-link" data-section="reviews">Reviews</a>
-      <a href="#pricing" class="nav-link" data-section="pricing">Pricing</a>
-      <a href="#faq" class="nav-link" data-section="faq">FAQ</a>
-    </div>
-    <a href="https://discord.gg/cordiq" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Start a Project</a>
-    <button class="menu-toggle icon-button" type="button" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
-      <span class="menu-toggle-icon" aria-hidden="true"></span>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="button button-small" href="https://discord.gg/cordiq" target="_blank" rel="noopener">Start a project</a>
+    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span>
     </button>
-  </div>
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <a href="#services" class="mobile-nav-link" data-section="services">Services</a>
-      <a href="#process" class="mobile-nav-link" data-section="process">Process</a>
-      <a href="#work" class="mobile-nav-link" data-section="work">Work</a>
-      <a href="#reviews" class="mobile-nav-link" data-section="reviews">Reviews</a>
-      <a href="#pricing" class="mobile-nav-link" data-section="pricing">Pricing</a>
-      <a href="#faq" class="mobile-nav-link" data-section="faq">FAQ</a>
-      <a href="https://discord.gg/cordiq" class="btn btn-primary mobile-cta" target="_blank" rel="noopener">Start a Project</a>
-    </div>
-  </div>
-</nav>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="button" href="https://discord.gg/cordiq" target="_blank" rel="noopener">Start a project</a>
+    </nav>
+  </header>
 
-<main id="main-content">
-
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="hero-glow-1" aria-hidden="true"></div>
-  <div class="hero-glow-2" aria-hidden="true"></div>
-  <svg class="hero-infrastructure" viewBox="0 0 850 600" preserveAspectRatio="none" aria-hidden="true">
-    <path class="path-glow glow-indigo" d="M20 180 H180 L245 240 H780"/>
-    <path class="path-glow glow-blue" d="M210 350 H400 L465 290 H835"/>
-    <path class="path-glow glow-cyan" d="M320 520 H520 L600 430 H790"/>
-    <path class="path-indigo" d="M20 180 H180 L245 240 H780"/>
-    <path class="path-blue" d="M210 350 H400 L465 290 H835"/>
-    <path class="path-cyan" d="M320 520 H520 L600 430 H790"/>
-    <circle cx="245" cy="240" r="3.5"/>
-    <circle class="node-cool node-late" cx="780" cy="240" r="4"/>
-    <circle class="node-blue" cx="465" cy="290" r="3.5"/>
-    <circle class="node-late" cx="600" cy="430" r="4"/>
-    <circle class="node-cool" cx="790" cy="430" r="3.5"/>
-  </svg>
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <h1 class="hero-title">Discord systems built<br class="hero-break"> for the way your<br class="hero-break"> <em>community works.</em></h1>
-        <p class="hero-sub">Custom bots, automation, moderation, and integrations. Everything your Discord community needs to run smoothly, stay secure, and grow.</p>
-        <div class="hero-ctas">
-          <a href="https://discord.gg/cordiq" class="btn btn-primary" target="_blank" rel="noopener">Start a Project</a>
-          <a href="#work" class="btn btn-ghost">Explore Our Work</a>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy reveal">
+        <div class="hero-heading">
+          <span class="eyebrow hero-eyebrow">Discord community systems</span>
+          <h1 class="hero-title">
+            <span class="hero-title-line">We build the</span>
+            <span class="hero-title-line">systems behind</span>
+            <span class="hero-title-line hero-title-accent">thriving Discord</span>
+            <span class="hero-title-line">communities.</span>
+          </h1>
+        </div>
+        <p>Strategy, automation, moderation, and custom integrations designed around how your community actually operates.</p>
+        <div class="hero-actions">
+          <a class="button" href="https://discord.gg/cordiq" target="_blank" rel="noopener">Start a project <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#work">See our work <span aria-hidden="true">↓</span></a>
         </div>
       </div>
+      <figure class="hero-visual reveal" data-parallax>
+        <img src="assets/images/v2/hero-infrastructure-animated.gif" alt="Animated modular community infrastructure with connected automation routes" width="768" height="512" fetchpriority="high" decoding="async">
+      </figure>
+    </section>
 
-      <!-- Project carousel -->
-      <div class="project-carousel" role="region" aria-roledescription="carousel" aria-label="CordIQ Discord projects" tabindex="0">
-        <div class="project-stage">
-          <article class="project-slide is-active" data-project-index="0" data-project-title="Custom Ticket System" role="group" aria-roledescription="slide" aria-label="1 of 4: Custom Ticket System" aria-hidden="false">
-            <div class="dc-wrap" role="img" aria-label="Discord ticket workflow showing a new project request and staff controls">
-        <div class="dc-bar">
-          <div class="dc-dot" style="background:#ff5f57"></div>
-          <div class="dc-dot" style="background:#febc2e"></div>
-          <div class="dc-dot" style="background:#28c840"></div>
-          <div class="dc-ch">
-            <span class="dc-hash">#</span>ticket‑0042
-          </div>
+    <section class="proof" aria-label="CordIQ experience">
+      <div class="proof-lead reveal">
+        <strong>50+</strong>
+        <span>custom Discord builds delivered</span>
+      </div>
+      <div class="proof-item reveal"><strong>4+</strong><span>years building for communities</span></div>
+      <div class="proof-item reveal"><strong>30 days</strong><span>support included with Pro</span></div>
+      <div class="proof-item reveal"><strong>Full ownership</strong><span>clean source code on delivery</span></div>
+    </section>
+
+    <section class="capabilities section" id="services">
+      <div class="section-intro reveal">
+        <span class="eyebrow">What we build</span>
+        <h2>Infrastructure for communities that have outgrown generic bots.</h2>
+        <p>One connected system, shaped around your team, permissions, member journey, and operational reality.</p>
+      </div>
+      <div class="capability-layout">
+        <div class="capability-index" aria-hidden="true">
+          <span class="active">01</span><span>02</span><span>03</span><span>04</span>
         </div>
-        <div class="dc-body">
-          <div class="dc-msg">
-            <div class="dc-av">
-              <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                <rect width="40" height="40" fill="#6366F1"/>
-                <path d="M20 7C12.82 7 7 12.82 7 20C7 27.18 12.82 33 20 33" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                <circle cx="28" cy="13" r="2.5" fill="#22D3EE"/>
-                <circle cx="32.5" cy="20" r="2.5" fill="#22D3EE"/>
-                <circle cx="28" cy="27" r="2.5" fill="#22D3EE"/>
-                <line x1="28" y1="13" x2="32.5" y2="20" stroke="#22D3EE" stroke-width="1.5" opacity="0.6"/>
-                <line x1="32.5" y1="20" x2="28" y2="27" stroke="#22D3EE" stroke-width="1.5" opacity="0.6"/>
-              </svg>
-            </div>
-            <div class="dc-mc">
-              <div class="dc-mh">
-                <span class="dc-name">CordIQ Bot</span>
-                <span class="dc-badge">APP</span>
-                <span class="dc-time">Today at 2:41 PM</span>
-              </div>
-              <div class="dc-embed">
-                <div class="dc-etitle">🎫 New Project Request</div>
-                <div class="dc-field">
-                  <div class="dc-fn">Package</div>
-                  <div class="dc-fv"><span class="dc-tag">Pro Bot · $749</span></div>
-                </div>
-                <div class="dc-field">
-                  <div class="dc-fn">Request</div>
-                  <div class="dc-fv">Economy system, Leveling + XP, Ticket system</div>
-                </div>
-                <div class="dc-field">
-                  <div class="dc-fn">Timeline</div>
-                  <div class="dc-fv">7–14 days</div>
-                </div>
-                <div class="dc-footer">Team member assigned · reply within 2h</div>
-              </div>
-              <div class="dc-btns">
-                <div class="dc-btn dc-btn-p">View Details</div>
-                <div class="dc-btn dc-btn-s">Close Ticket</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="dc-input">Message #ticket‑0042...</div>
-            </div>
+        <div class="capability-list">
+          <article class="capability reveal" data-capability="0">
+            <div class="capability-number">01</div>
+            <div><h3>Purpose-built bots</h3><p>Commands, permissions, databases, dashboards, and workflows designed for your actual use case.</p></div>
+            <span class="capability-meta">Discord.js / Python</span>
           </article>
-
-          <article class="project-slide is-next" data-project-index="1" data-project-title="Moderation and Security" role="group" aria-roledescription="slide" aria-label="2 of 4: Moderation and Security" aria-hidden="true">
-            <div class="dc-wrap" role="img" aria-label="Discord moderation interface showing an anti-raid incident and security controls">
-              <div class="dc-bar">
-                <div class="dc-dot" style="background:#ff5f57"></div>
-                <div class="dc-dot" style="background:#febc2e"></div>
-                <div class="dc-dot" style="background:#28c840"></div>
-                <div class="dc-ch"><span class="dc-hash">#</span>mod-log</div>
-              </div>
-              <div class="dc-body">
-                <div class="dc-msg">
-                  <div class="dc-av">
-                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                      <rect width="40" height="40" fill="#6366F1"/>
-                      <path d="M20 7C12.82 7 7 12.82 7 20C7 27.18 12.82 33 20 33" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                      <circle cx="28" cy="13" r="2.5" fill="#22D3EE"/><circle cx="32.5" cy="20" r="2.5" fill="#22D3EE"/><circle cx="28" cy="27" r="2.5" fill="#22D3EE"/>
-                    </svg>
-                  </div>
-                  <div class="dc-mc">
-                    <div class="dc-mh"><span class="dc-name">CordIQ Security</span><span class="dc-badge">APP</span><span class="dc-time">Today at 2:41 PM</span></div>
-                    <div class="dc-embed" style="border-left-color:#F87171;">
-                      <div class="dc-etitle">Anti-Raid Incident Resolved</div>
-                      <div class="dc-field"><div class="dc-fn">Status</div><div class="dc-fv"><span class="dc-tag">Server Secured</span></div></div>
-                      <div class="dc-field"><div class="dc-fn">Action</div><div class="dc-fv">23 accounts blocked, lockdown lifted</div></div>
-                      <div class="dc-field"><div class="dc-fn">Evidence</div><div class="dc-fv">Audit log and staff report saved</div></div>
-                      <div class="dc-footer">Protection active &bull; all systems normal</div>
-                    </div>
-                    <div class="dc-btns"><div class="dc-btn dc-btn-p">View Audit Log</div><div class="dc-btn dc-btn-s">Staff Tools</div></div>
-                  </div>
-                </div>
-              </div>
-              <div class="dc-input">Message #mod-log...</div>
-            </div>
+          <article class="capability reveal" data-capability="1">
+            <div class="capability-number">02</div>
+            <div><h3>Operations automation</h3><p>Onboarding, applications, tickets, role assignment, notifications, and repeatable staff workflows.</p></div>
+            <span class="capability-meta">Events / Rules / Jobs</span>
           </article>
-
-          <article class="project-slide is-hidden" data-project-index="2" data-project-title="Server Automation" role="group" aria-roledescription="slide" aria-label="3 of 4: Server Automation" aria-hidden="true">
-            <div class="dc-wrap" role="img" aria-label="Discord automation interface showing a completed welcome and role workflow">
-              <div class="dc-bar">
-                <div class="dc-dot" style="background:#ff5f57"></div>
-                <div class="dc-dot" style="background:#febc2e"></div>
-                <div class="dc-dot" style="background:#28c840"></div>
-                <div class="dc-ch"><span class="dc-hash">#</span>automation-log</div>
-              </div>
-              <div class="dc-body">
-                <div class="dc-msg">
-                  <div class="dc-av">
-                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                      <rect width="40" height="40" fill="#6366F1"/>
-                      <path d="M20 7C12.82 7 7 12.82 7 20C7 27.18 12.82 33 20 33" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                      <circle cx="28" cy="13" r="2.5" fill="#22D3EE"/><circle cx="32.5" cy="20" r="2.5" fill="#22D3EE"/><circle cx="28" cy="27" r="2.5" fill="#22D3EE"/>
-                    </svg>
-                  </div>
-                  <div class="dc-mc">
-                    <div class="dc-mh"><span class="dc-name">CordIQ Automations</span><span class="dc-badge">APP</span><span class="dc-time">Today at 2:41 PM</span></div>
-                    <div class="dc-embed" style="border-left-color:#4ADE80;">
-                      <div class="dc-etitle">Workflow Completed</div>
-                      <div class="dc-field"><div class="dc-fn">Trigger</div><div class="dc-fv"><span class="dc-tag">New Member</span></div></div>
-                      <div class="dc-field"><div class="dc-fn">Actions</div><div class="dc-fv">Welcome sent, roles assigned, profile created</div></div>
-                      <div class="dc-field"><div class="dc-fn">Next Run</div><div class="dc-fv">Community event reminder at 7:00 PM</div></div>
-                      <div class="dc-footer">5 automation steps completed successfully</div>
-                    </div>
-                    <div class="dc-btns"><div class="dc-btn dc-btn-p">View Workflow</div><div class="dc-btn dc-btn-s">Edit Rules</div></div>
-                  </div>
-                </div>
-              </div>
-              <div class="dc-input">Message #automation-log...</div>
-            </div>
+          <article class="capability reveal" data-capability="2">
+            <div class="capability-number">03</div>
+            <div><h3>Moderation systems</h3><p>Anti-raid protection, evidence capture, audit logs, escalation paths, and configurable enforcement.</p></div>
+            <span class="capability-meta">Safety / Audit / Control</span>
           </article>
-
-          <article class="project-slide is-prev" data-project-index="3" data-project-title="Integrations and Community Systems" role="group" aria-roledescription="slide" aria-label="4 of 4: Integrations and Community Systems" aria-hidden="true">
-            <div class="dc-wrap" role="img" aria-label="Discord integration interface showing a stream alert and connected API services">
-              <div class="dc-bar">
-                <div class="dc-dot" style="background:#ff5f57"></div>
-                <div class="dc-dot" style="background:#febc2e"></div>
-                <div class="dc-dot" style="background:#28c840"></div>
-                <div class="dc-ch"><span class="dc-hash">#</span>integrations</div>
-              </div>
-              <div class="dc-body">
-                <div class="dc-msg">
-                  <div class="dc-av">
-                    <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                      <rect width="40" height="40" fill="#6366F1"/>
-                      <path d="M20 7C12.82 7 7 12.82 7 20C7 27.18 12.82 33 20 33" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                      <circle cx="28" cy="13" r="2.5" fill="#22D3EE"/><circle cx="32.5" cy="20" r="2.5" fill="#22D3EE"/><circle cx="28" cy="27" r="2.5" fill="#22D3EE"/>
-                    </svg>
-                  </div>
-                  <div class="dc-mc">
-                    <div class="dc-mh"><span class="dc-name">CordIQ Integrations</span><span class="dc-badge">APP</span><span class="dc-time">Today at 2:41 PM</span></div>
-                    <div class="dc-embed" style="border-left-color:#22D3EE;">
-                      <div class="dc-etitle">Stream Alert Delivered</div>
-                      <div class="dc-field"><div class="dc-fn">Source</div><div class="dc-fv"><span class="dc-tag">Twitch API</span></div></div>
-                      <div class="dc-field"><div class="dc-fn">Delivery</div><div class="dc-fv">Live alert posted to community-updates</div></div>
-                      <div class="dc-field"><div class="dc-fn">Systems</div><div class="dc-fv">Verification and applications connected</div></div>
-                      <div class="dc-footer">All API connections healthy</div>
-                    </div>
-                    <div class="dc-btns"><div class="dc-btn dc-btn-p">Integration Hub</div><div class="dc-btn dc-btn-s">API Status</div></div>
-                  </div>
-                </div>
-              </div>
-              <div class="dc-input">Message #integrations...</div>
-            </div>
+          <article class="capability reveal" data-capability="3">
+            <div class="capability-number">04</div>
+            <div><h3>Connected integrations</h3><p>Bring game data, payments, websites, CRMs, creator tools, and private APIs into Discord.</p></div>
+            <span class="capability-meta">APIs / Webhooks / Data</span>
           </article>
         </div>
-
-        <div class="project-controls">
-          <button class="project-arrow project-prev icon-button" type="button" aria-label="Show previous project"><span aria-hidden="true">&larr;</span></button>
-          <div class="project-dots" role="group" aria-label="Choose a project">
-            <button class="project-dot active" type="button" data-project-dot="0" aria-label="Show Custom Ticket System" aria-current="true"></button>
-            <button class="project-dot" type="button" data-project-dot="1" aria-label="Show Moderation and Security"></button>
-            <button class="project-dot" type="button" data-project-dot="2" aria-label="Show Server Automation"></button>
-            <button class="project-dot" type="button" data-project-dot="3" aria-label="Show Integrations and Community Systems"></button>
-          </div>
-          <button class="project-arrow project-next icon-button" type="button" aria-label="Show next project"><span aria-hidden="true">&rarr;</span></button>
-        </div>
-        <p class="sr-only" id="project-carousel-status" aria-live="polite">Project 1 of 4: Custom Ticket System</p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- STATS -->
-<section class="stats" id="stats" aria-labelledby="proof-title">
-  <h2 class="sr-only" id="proof-title">CordIQ project experience</h2>
-  <div class="proof-inner">
-    <div class="proof-grid">
-      <article class="proof-card proof-primary">
-        <div class="proof-primary-layout">
-          <div class="proof-primary-content">
-            <div class="proof-value" data-count="50">50+</div>
-            <h3 class="proof-title">Custom Discord Builds</h3>
-            <p class="proof-description">Bots, automation, moderation, integrations, and community systems.</p>
-            <div class="proof-trust" aria-label="Secure, scalable, and reliable systems">
-              <span class="proof-trust-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 2.7 7.7 7 10 4.3-2.3 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
-              </span>
-              <span>Secure</span><span class="proof-trust-dot" aria-hidden="true"></span>
-              <span>Scalable</span><span class="proof-trust-dot cyan" aria-hidden="true"></span>
-              <span>Reliable</span>
-            </div>
-          </div>
-          <div class="proof-network" aria-hidden="true">
-            <svg class="capability-lines" viewBox="0 0 420 320" preserveAspectRatio="none" aria-hidden="true">
-              <g class="network-glow">
-                <path class="route-indigo" d="M135 33H178V54H224V76H300V139H320"/>
-                <path class="route-blue" d="M150 108H214V98H286V154H320"/>
-                <path class="route-indigo" d="M135 198H195V181H300V170H320"/>
-                <path class="route-cyan" d="M154 286H222V238H292V184H320"/>
-              </g>
-              <g class="network-core-line">
-                <path class="route-indigo" d="M135 33H178V54H224V76H300V139H320"/>
-                <path class="route-blue" d="M150 108H214V98H286V154H320"/>
-                <path class="route-indigo" d="M135 198H195V181H300V170H320"/>
-                <path class="route-cyan" d="M154 286H222V238H292V184H320"/>
-              </g>
-              <circle class="dot-indigo" cx="135" cy="33" r="3"/>
-              <circle class="dot-blue" cx="150" cy="108" r="3"/>
-              <circle class="dot-indigo" cx="135" cy="198" r="3"/>
-              <circle class="dot-cyan" cx="154" cy="286" r="3"/>
-            </svg>
-            <div class="capability-node capability-bots">
-              <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V4M9 4h6M8 15h.01M16 15h.01M8 19v2M16 19v2"/></svg></span><span>Bots</span>
-            </div>
-            <div class="capability-node capability-automation">
-              <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-8 12h7l-1 8 8-12h-7l1-8Z"/></svg></span><span>Automation</span>
-            </div>
-            <div class="capability-node capability-moderation">
-              <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 2.7 7.7 7 10 4.3-2.3 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><span>Moderation</span>
-            </div>
-            <div class="capability-node capability-integrations">
-              <span class="capability-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8M9 7v5M15 7v5M7 12v3a5 5 0 0 0 10 0v-3M12 20v2"/></svg></span><span>Integrations</span>
-            </div>
-            <div class="project-destination">
-              <span class="project-node-logo" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="7" y="8" width="34" height="29" rx="6"/>
-                  <path d="M7 16h34"/>
-                  <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
-                  <circle cx="16" cy="12" r="1" fill="currentColor" stroke="none"/>
-                  <rect x="12" y="21" width="9" height="9" rx="2"/>
-                  <path d="M26 22h9M26 26h7M26 30h5M18 41h12"/>
-                </svg>
-                <span class="project-node-port port-bots"></span>
-                <span class="project-node-port port-automation"></span>
-                <span class="project-node-port port-moderation"></span>
-                <span class="project-node-port port-integrations"></span>
-              </span>
-              <span>Custom Project</span>
-            </div>
-          </div>
-        </div>
-      </article>
-      <article class="proof-card proof-small proof-experience">
-        <div class="proof-experience-content">
-          <div class="proof-value" data-count="4">4+</div>
-          <h3 class="proof-title">Years of Experience</h3>
-          <p class="proof-small-description">Building custom Discord systems that scale.</p>
-        </div>
-        <div class="proof-experience-watermark" aria-hidden="true">
-          <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="12" y="18" width="72" height="60" rx="8"/>
-            <path d="M12 32h72"/>
-            <circle cx="21" cy="25" r="1.5" fill="currentColor" stroke="none"/>
-            <circle cx="28" cy="25" r="1.5" fill="currentColor" stroke="none"/>
-            <path d="m35 47-9 8 9 8M61 47l9 8-9 8M54 43 42 67"/>
-          </svg>
-        </div>
-      </article>
-      <article class="proof-card proof-small proof-reviews">
-        <div class="proof-value" data-count="30">30+</div>
-        <h3 class="proof-title">Client Reviews</h3>
-        <p class="proof-small-description">From direct and freelance clients.</p>
-        <div class="proof-support-visual proof-review-visual" aria-hidden="true">
-          <span class="proof-review-stars">★★★★★</span>
-          <span class="proof-review-avatars"><span></span><span></span><span></span></span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT WE BUILD -->
-<section class="services" id="services" aria-labelledby="services-title">
-  <div class="container">
-    <div data-r>
-      <span class="section-label">01 &middot; What We Build</span>
-      <h2 id="services-title" style="margin-bottom:12px;">Everything your Discord community <span class="services-title-accent">needs.</span></h2>
-      <p class="section-desc">From custom bots to complete automation and security systems, every solution is designed around how your community operates.</p>
-    </div>
-    <div class="service-grid">
-      <article class="service-card" data-r>
-        <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V4M9 4h6M8 15h.01M16 15h.01M8 19v2M16 19v2"/></svg></span>
-        <div class="service-visual service-visual-bot" aria-hidden="true">
-          <svg viewBox="0 0 240 150" focusable="false">
-            <rect class="visual-frame" x="10" y="10" width="220" height="130" rx="10"/>
-            <path class="visual-line" d="M10 34H230"/>
-            <circle class="visual-soft" cx="24" cy="22" r="2.5"/><circle class="visual-soft" cx="34" cy="22" r="2.5"/><circle class="visual-soft" cx="44" cy="22" r="2.5"/>
-            <rect class="visual-panel" x="28" y="48" width="184" height="58" rx="7"/>
-            <path class="visual-line" d="M42 62h48M42 74h112M42 86h82"/>
-            <circle class="visual-status" cx="194" cy="62" r="3"/>
-            <g class="visual-detail"><rect class="visual-node" x="40" y="116" width="45" height="12" rx="4"/><rect class="visual-node" x="92" y="116" width="45" height="12" rx="4"/><rect class="visual-node" x="144" y="116" width="45" height="12" rx="4"/></g>
-          </svg>
-        </div>
-        <h3>Custom Discord Bots</h3>
-        <p>Purpose-built bots designed around your community, workflows, and goals.</p>
-        <ul class="service-capabilities">
-          <li>Slash commands and interactive components</li><li>Ticket and support systems</li>
-          <li>Economy and leveling systems</li><li>Applications and verification</li>
-          <li>Community engagement tools</li><li>Fully custom functionality</li>
-        </ul>
-        <button class="disclosure-button capability-toggle" type="button" aria-expanded="false">Show all capabilities</button>
-      </article>
-      <article class="service-card automation" data-r>
-        <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-8 12h7l-1 8 8-12h-7l1-8Z"/></svg></span>
-        <div class="service-visual service-visual-workflow" aria-hidden="true">
-          <svg viewBox="0 0 240 150" focusable="false">
-            <path class="visual-line" d="M38 75H78M105 75h36M168 75h34"/>
-            <path class="visual-line visual-detail" d="M92 57V35h52M155 93v22h38"/>
-            <rect class="visual-node" x="16" y="58" width="44" height="34" rx="8"/>
-            <rect class="visual-node" x="78" y="52" width="50" height="46" rx="9"/>
-            <rect class="visual-node" x="141" y="58" width="54" height="34" rx="8"/>
-            <circle class="visual-status" cx="38" cy="75" r="4"/><circle class="visual-status" cx="103" cy="75" r="4"/><circle class="visual-status" cx="168" cy="75" r="4"/>
-            <g class="visual-detail"><rect class="visual-panel" x="144" y="23" width="42" height="24" rx="6"/><rect class="visual-panel" x="193" y="103" width="30" height="24" rx="6"/></g>
-          </svg>
-        </div>
-        <h3>Automation &amp; Workflows</h3>
-        <p>Reduce manual work with connected systems that run reliably in the background.</p>
-        <ul class="service-capabilities">
-          <li>Welcome and onboarding flows</li><li>Autoroles and self-role panels</li>
-          <li>Scheduled messages and events</li><li>Alerts and notifications</li>
-          <li>Temporary voice channels</li><li>Custom automated processes</li>
-        </ul>
-        <button class="disclosure-button capability-toggle" type="button" aria-expanded="false">Show all capabilities</button>
-      </article>
-      <article class="service-card security" data-r>
-        <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 2.7 7.7 7 10 4.3-2.3 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
-        <div class="service-visual service-visual-security" aria-hidden="true">
-          <svg viewBox="0 0 240 150" focusable="false">
-            <rect class="visual-frame" x="12" y="14" width="216" height="122" rx="10"/>
-            <path class="visual-line" d="M12 38H228"/>
-            <path class="visual-line" d="M62 63h112M62 78h80M62 105h104M62 119h65"/>
-            <path class="visual-line" d="M39 56 26 61v10c0 12 5 20 13 25 8-5 13-13 13-25V61L39 56Z"/>
-            <path class="visual-line" d="m33 75 5 5 9-11"/>
-            <circle class="visual-status" cx="196" cy="63" r="4"/>
-            <g class="visual-detail"><circle class="visual-soft" cx="196" cy="105" r="4"/><rect class="visual-panel" x="180" y="114" width="30" height="9" rx="4"/></g>
-          </svg>
-        </div>
-        <h3>Moderation &amp; Security</h3>
-        <p>Protect your server with dependable moderation tools and automated threat response.</p>
-        <ul class="service-capabilities">
-          <li>Anti-raid and anti-nuke protection</li><li>Spam and bad-word filtering</li>
-          <li>Warning and punishment systems</li><li>Audit logs and staff controls</li>
-          <li>Captcha and verification</li><li>Custom security rules</li>
-        </ul>
-        <button class="disclosure-button capability-toggle" type="button" aria-expanded="false">Show all capabilities</button>
-      </article>
-      <article class="service-card integrations" data-r>
-        <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.1 1.1"/><path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.1-1.1"/></svg></span>
-        <div class="service-visual service-visual-integrations" aria-hidden="true">
-          <svg viewBox="0 0 240 150" focusable="false">
-            <path class="visual-line" d="M45 40 104 70M45 110l59-30M136 75h54M120 62V30M120 88v32"/>
-            <rect class="visual-node" x="20" y="24" width="50" height="32" rx="8"/>
-            <rect class="visual-node" x="20" y="94" width="50" height="32" rx="8"/>
-            <rect class="visual-panel" x="101" y="56" width="38" height="38" rx="11"/>
-            <rect class="visual-node" x="190" y="59" width="34" height="32" rx="8"/>
-            <g class="visual-detail"><rect class="visual-node" x="98" y="14" width="44" height="20" rx="6"/><rect class="visual-node" x="98" y="116" width="44" height="20" rx="6"/></g>
-            <circle class="visual-status" cx="45" cy="40" r="3.5"/><circle class="visual-status" cx="45" cy="110" r="3.5"/><circle class="visual-status" cx="207" cy="75" r="3.5"/>
-          </svg>
-        </div>
-        <h3>Integrations &amp; Support</h3>
-        <p>Connect Discord with external platforms and keep the complete system maintained.</p>
-        <ul class="service-capabilities">
-          <li>API and database integrations</li><li>Twitch and Kick alerts</li>
-          <li>External verification services</li><li>Application and payment systems</li>
-          <li>Maintenance and upgrades</li><li>Ongoing technical support</li>
-        </ul>
-        <button class="disclosure-button capability-toggle" type="button" aria-expanded="false">Show all capabilities</button>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process" id="process" aria-labelledby="process-title">
-  <div class="container">
-    <div data-r>
-      <span class="section-label">02 &middot; Process</span>
-      <h2 id="process-title" style="margin-bottom:12px;">A clear process from idea to launch.</h2>
-      <p class="section-desc">You stay informed from the first conversation through deployment and ongoing support.</p>
-    </div>
-    <ol class="process-steps">
-      <li class="process-stage" data-r><span class="process-step-number">01</span><span class="process-step-node" aria-hidden="true"></span><h3>Discovery</h3><p>We learn about your server, goals, users, challenges, and required systems.</p><span class="process-deliverable"><small>Deliverable</small>Requirements brief</span></li>
-      <li class="process-stage" data-r><span class="process-step-number">02</span><span class="process-step-node" aria-hidden="true"></span><h3>Scope &amp; Proposal</h3><p>You receive a clear solution plan, feature scope, timeline, deliverables, and price.</p><span class="process-deliverable"><small>Deliverable</small>Project proposal</span></li>
-      <li class="process-stage" data-r><span class="process-step-number">03</span><span class="process-step-node" aria-hidden="true"></span><h3>Build &amp; Review</h3><p>We build the system, provide working previews, and refine it through your feedback.</p><span class="process-deliverable"><small>Deliverable</small>Working preview</span></li>
-      <li class="process-stage" data-r><span class="process-step-number">04</span><span class="process-step-node" aria-hidden="true"></span><h3>Launch &amp; Support</h3><p>We test, deploy, document, and continue supporting your project after launch.</p><span class="process-deliverable"><small>Deliverable</small>Deployment and support</span></li>
-    </ol>
-  </div>
-</section>
-
-<!-- WORK -->
-<section class="work" id="work" aria-labelledby="work-title">
-  <div class="container">
-    <div data-r>
-      <span class="section-label">03 &middot; Work</span>
-      <h2 id="work-title" style="margin-bottom:12px;">Recent projects.</h2>
-      <p class="section-desc">A selection of custom Discord systems, automation workflows, and connected community tools.</p>
-    </div>
-    <div class="portfolio-carousel" role="region" aria-roledescription="carousel" aria-label="CordIQ recent projects" tabindex="0" data-project-count="3" data-r>
-      <div class="portfolio-row">
-        <div class="portfolio-viewport">
-          <div class="portfolio-track">
-            <article class="port-card" role="group" aria-roledescription="slide" aria-label="1 of 3: Valorant Stats and Rank Bot">
-              <!-- TODO: Replace this concept preview with a verified project screenshot. -->
-              <div class="port-thumb"><span class="port-placeholder-label">Concept preview</span><div class="project-preview" role="img" aria-label="Concept interface preview for a Valorant statistics Discord bot"><div class="preview-bar"><span></span><span></span><span></span></div><div class="preview-body"><div class="preview-side"></div><div class="preview-content"><div class="preview-line short"></div><div class="preview-line medium"></div><div class="preview-panel"></div></div></div></div></div>
-              <div class="port-info"><div class="port-niche">Gaming</div><h3>Valorant Stats &amp; Rank Bot</h3><p>Centralized live rank data, match history, leaderboards, and automated role assignment inside Discord.</p><div class="port-tags"><span class="port-tag">Game API</span><span class="port-tag">Automation</span><span class="port-tag">Leaderboards</span></div></div>
-            </article>
-            <article class="port-card" role="group" aria-roledescription="slide" aria-label="2 of 3: Economy and Leveling System">
-              <!-- TODO: Replace this concept preview with a verified project screenshot. -->
-              <div class="port-thumb"><span class="port-placeholder-label">Concept preview</span><div class="project-preview" role="img" aria-label="Concept interface preview for a Discord economy and leveling system"><div class="preview-bar"><span></span><span></span><span></span></div><div class="preview-body"><div class="preview-side"></div><div class="preview-content"><div class="preview-line medium"></div><div class="preview-line short"></div><div class="preview-panel"></div></div></div></div></div>
-              <div class="port-info"><div class="port-niche">Community</div><h3>Economy &amp; Leveling System</h3><p>Connected currency, inventory, XP, rank cards, and leaderboards into one manageable community system.</p><div class="port-tags"><span class="port-tag">Economy</span><span class="port-tag">XP System</span><span class="port-tag">Database</span></div></div>
-            </article>
-            <article class="port-card" role="group" aria-roledescription="slide" aria-label="3 of 3: Client Ticket and CRM Bot">
-              <!-- TODO: Replace this concept preview with a verified project screenshot. -->
-              <div class="port-thumb"><span class="port-placeholder-label">Concept preview</span><div class="project-preview" role="img" aria-label="Concept interface preview for a Discord client ticket and CRM bot"><div class="preview-bar"><span></span><span></span><span></span></div><div class="preview-body"><div class="preview-side"></div><div class="preview-content"><div class="preview-line short"></div><div class="preview-panel"></div><div class="preview-line medium"></div></div></div></div></div>
-              <div class="port-info"><div class="port-niche">Business</div><h3>Client Ticket &amp; CRM Bot</h3><p>Streamlined request intake, routing, transcripts, SLA tracking, and team assignment for a support operation.</p><div class="port-tags"><span class="port-tag">Ticketing</span><span class="port-tag">Workflows</span><span class="port-tag">Logging</span></div></div>
-            </article>
-          </div>
-        </div>
-        <button class="portfolio-arrow portfolio-prev icon-button" type="button" aria-label="Previous project"><span aria-hidden="true">&larr;</span></button>
-        <button class="portfolio-arrow portfolio-next icon-button" type="button" aria-label="Next project"><span aria-hidden="true">&rarr;</span></button>
-      </div>
-      <div class="portfolio-counter" aria-hidden="true"><span class="portfolio-current">01</span><span class="portfolio-divider">/</span><span class="portfolio-total">03</span></div>
-      <p class="sr-only portfolio-status" aria-live="polite">Project 1 of 3: Valorant Stats and Rank Bot</p>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews" id="reviews" aria-labelledby="reviews-title">
-  <div class="container">
-    <div data-r>
-      <span class="section-label">04 &middot; Reviews</span>
-      <h2 id="reviews-title" style="margin-bottom:12px;">Trusted by communities and clients.</h2>
-      <p class="section-desc">Selected feedback from Discord projects delivered across gaming, community, and business use cases.</p>
-    </div>
-    <div class="rev-grid">
-      <article class="rev rev-featured" data-r><div class="rev-src">Client review</div><div class="rev-stars" aria-label="Five-star review">★★★★★</div><p class="rev-text">“Delivered exactly what I described, ahead of schedule. The economy system works flawlessly and the code is clean enough that I can maintain it myself.”</p><div class="rev-author"><div class="rev-av">J</div><div><div class="rev-name">Jake M.</div><div class="rev-server">Gaming community</div></div></div></article>
-      <article class="rev rev-compact" data-r><div class="rev-src">Client review</div><div class="rev-stars" aria-label="Five-star review">★★★★★</div><p class="rev-text">“The fastest and most communicative developers we’ve worked with. The bot has been running for months without a single issue.”</p><div class="rev-author"><div class="rev-av">S</div><div><div class="rev-name">Sarah K.</div><div class="rev-server">Crypto community</div></div></div></article>
-      <article class="rev rev-compact" data-r><div class="rev-src">Client review</div><div class="rev-stars" aria-label="Five-star review">★★★★★</div><p class="rev-text">“They built our complete tournament system, from team registration through standings. Our community has used it every week since launch.”</p><div class="rev-author"><div class="rev-av">R</div><div><div class="rev-name">RyuGames</div><div class="rev-server">Esports community</div></div></div></article>
-      <article class="rev rev-compact" data-r><div class="rev-src">Client review</div><div class="rev-stars" aria-label="Five-star review">★★★★★</div><p class="rev-text">“Completely transparent from day one. The ticket system now handles our daily support requests reliably without slowing down the team.”</p><div class="rev-author"><div class="rev-av">M</div><div><div class="rev-name">Mira L.</div><div class="rev-server">Business community</div></div></div></article>
-    </div>
-    <button class="disclosure-button reviews-more-button" type="button" aria-expanded="false">Show more reviews</button>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing" id="pricing" aria-labelledby="pricing-title">
-  <div class="container">
-    <div data-r>
-      <span class="section-label">05 &middot; Pricing</span>
-      <h2 id="pricing-title" style="margin-bottom:12px;">Transparent pricing.<br>No surprises.</h2>
-      <p class="section-desc">Every project starts with a free consultation in our Discord. We scope it together before you commit to anything.</p>
-    </div>
-    <div class="plans">
-      <article class="plan" data-r>
-        <div class="plan-name">Starter</div><div class="plan-price"><sup>$</sup>299</div><div class="plan-note">one-time · fixed price</div>
-        <div class="plan-desc">A single-focus bot for small to mid-size servers. Simple needs, fast delivery, no database required.</div><hr class="divider-line"/>
-        <ul class="plan-feats"><li><span class="ck">✓</span>1–2 custom features of your choice</li><li><span class="ck">✓</span>Slash commands + custom embed design</li><li><span class="ck">✓</span>Full source code on delivery</li><li><span class="ck">✓</span>3–5 day delivery</li><li><span class="ck">✓</span>7-day post-delivery support</li></ul>
-        <a href="https://discord.gg/cordiq" class="btn btn-ghost plan-btn" target="_blank" rel="noopener">Open a Ticket</a>
-      </article>
-      <article class="plan pop" data-r>
-        <div class="pop-badge">MOST POPULAR</div><div class="plan-name">Pro</div><div class="plan-price"><sup>$</sup>749</div><div class="plan-note">one-time · fixed price</div>
-        <div class="plan-desc">A complete multi-feature system for established servers that need a real custom setup.</div><hr class="divider-line"/>
-        <ul class="plan-feats"><li><span class="ck">✓</span>Up to 5 features of your choice</li><li><span class="ck">✓</span>Persistent database</li><li><span class="ck">✓</span>Custom embed + brand design</li><li><span class="ck">✓</span>Role management &amp; permissions</li><li><span class="ck">✓</span>7–14 day delivery</li></ul>
-        <details class="plan-more"><summary>View all features</summary><ul class="plan-feats"><li><span class="ck">✓</span>1 round of revisions</li><li><span class="ck">✓</span>30-day support</li><li><span class="ck">✓</span>Full source code</li></ul></details>
-        <a href="https://discord.gg/cordiq" class="btn btn-primary plan-btn" target="_blank" rel="noopener">Open a Ticket</a>
-      </article>
-      <article class="plan" data-r>
-        <div class="plan-name">Enterprise</div><div class="plan-price"><span class="custom-price">Custom</span></div><div class="plan-note">from $1,800 · scoped per project</div>
-        <div class="plan-desc">Flexible systems for complex requirements, dashboards, integrations, and multi-server operations.</div><hr class="divider-line"/>
-        <ul class="plan-feats"><li><span class="ck">✓</span>Custom feature scope</li><li><span class="ck">✓</span>Web dashboard option</li><li><span class="ck">✓</span>Third-party API integrations</li><li><span class="ck">✓</span>AI integration available</li><li><span class="ck">✓</span>Multi-server support</li></ul>
-        <details class="plan-more"><summary>View all features</summary><ul class="plan-feats"><li><span class="ck">✓</span>2 rounds of revisions</li><li><span class="ck">✓</span>60-day support</li><li><span class="ck">✓</span>Retainer option available</li></ul></details>
-        <a href="https://discord.gg/cordiq" class="btn btn-ghost plan-btn" target="_blank" rel="noopener">Get a Custom Quote</a>
-      </article>
-    </div>
-    <div class="retainer-strip" data-r>
-      <div><strong>Maintenance Retainer &bull; <span style="color:var(--pl)">$99 / month</span></strong><div style="font-size:13px;color:var(--muted);margin-top:3px;">Available after any project. Bot hosting, bug fixes, minor updates, and priority support.</div></div>
-      <a href="https://discord.gg/cordiq" class="btn btn-ghost" target="_blank" rel="noopener" style="flex-shrink:0;">Ask About Retainer</a>
-    </div>
-    <p class="pricing-disclaimer">Final pricing depends on project scope, integrations, complexity, and delivery requirements.</p>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section class="team-sec" id="team" aria-labelledby="team-title">
-  <div class="container">
-    <div class="team-inner">
-      <div data-r>
-        <span class="section-label">06 &middot; Team</span>
-        <h2 id="team-title" style="margin-bottom:16px;">Direct communication.<br>Full ownership.</h2>
-        <p class="section-desc" style="margin-bottom:0;">You work directly with the developer designing and building your system, without account managers, unnecessary handoffs, or outsourced development.</p>
-        <div class="team-badges">
-          <div class="tbadge"><div class="tdot" style="background:var(--green)"></div>Direct developer access</div>
-          <div class="tbadge"><div class="tdot" style="background:var(--cyan)"></div>Technical ownership</div>
-          <div class="tbadge"><div class="tdot" style="background:var(--pl)"></div>Ongoing accountability</div>
+    <section class="work section" id="work">
+      <div class="work-heading reveal">
+        <div><span class="eyebrow">Selected systems</span><h2>Built for the work behind the community.</h2></div>
+        <div class="gallery-controls" aria-label="Case study controls">
+          <button type="button" data-gallery-prev aria-label="Previous case study">←</button>
+          <button type="button" data-gallery-next aria-label="Next case study">→</button>
         </div>
       </div>
-      <div class="team-cards" data-r>
-        <div class="tcard">
-          <div class="tav">A</div>
-          <div class="tcard-name">Ayoub</div>
-          <div class="tcard-role">Bot Developer & Lead</div>
-        </div>
-        <!-- A second member column can be restored when a verified team profile is available. -->
-        <a href="https://discord.gg/cordiq" class="tcard wide" target="_blank" rel="noopener">
-          <svg width="38" height="38" viewBox="0 0 40 40" fill="none" style="flex-shrink:0;" aria-hidden="true">
-            <rect width="40" height="40" rx="10" fill="#6366F1"/>
-            <path d="M20 7C12.82 7 7 12.82 7 20C7 27.18 12.82 33 20 33" stroke="white" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="28" cy="13" r="2.5" fill="#22D3EE"/>
-            <circle cx="32.5" cy="20" r="2.5" fill="#22D3EE"/>
-            <circle cx="28" cy="27" r="2.5" fill="#22D3EE"/>
-            <line x1="28" y1="13" x2="32.5" y2="20" stroke="#22D3EE" stroke-width="1.5" opacity="0.6"/>
-            <line x1="32.5" y1="20" x2="28" y2="27" stroke="#22D3EE" stroke-width="1.5" opacity="0.6"/>
-          </svg>
-          <div>
-            <div class="tcard-name">CordIQ Discord Server</div>
-            <div class="tcard-role">Ask questions, see our work, open a project ticket</div>
-          </div>
-        </a>
+      <div class="case-gallery" data-gallery>
+        <article class="case-study">
+          <figure><img src="assets/images/v2/case-gaming.png" alt="Gaming intelligence system with rank progression and match analytics" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+          <div class="case-copy"><span>Gaming operations</span><h3>Rank intelligence inside the community.</h3><p>Live player data, match history, leaderboards, and role automation in one connected system.</p></div>
+        </article>
+        <article class="case-study">
+          <figure><img src="assets/images/v2/case-moderation.png" alt="Community moderation command center with incident review and audit evidence" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+          <div class="case-copy"><span>Trust and safety</span><h3>Moderation that stays accountable.</h3><p>Automated detection, review queues, enforcement, and evidence designed for consistent staff decisions.</p></div>
+        </article>
+        <article class="case-study">
+          <figure><img src="assets/images/v2/case-support.png" alt="Member support workspace with request routing and automation controls" width="1536" height="1024" loading="lazy" decoding="async"></figure>
+          <div class="case-copy"><span>Member operations</span><h3>Support without the handoff chaos.</h3><p>Request intake, routing, member context, and automated actions built into one clear workspace.</p></div>
+        </article>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FAQ -->
-<section class="faq-sec" id="faq" aria-labelledby="faq-title">
-  <div class="container">
-    <div class="faq-layout">
-      <div class="faq-intro" data-r>
-        <span class="section-label">07 &middot; FAQ</span>
-        <h2 id="faq-title" style="margin-bottom:16px;">Common questions.</h2>
-        <p class="section-desc">Everything you need to know before starting a custom Discord project with CordIQ.</p>
+    <section class="process section" id="process">
+      <div class="process-copy reveal">
+        <h2>A direct path from problem to production.</h2>
+        <p>You work with the developer building the system. No account-manager relay and no outsourced handoffs.</p>
+        <a class="text-link" href="https://discord.gg/cordiq" target="_blank" rel="noopener">Start a project <span aria-hidden="true">↗</span></a>
       </div>
+      <ol class="process-list">
+        <li class="reveal"><span>Discover</span><strong>Map the operation</strong><p>We identify the real workflow, permissions, edge cases, and success criteria.</p></li>
+        <li class="reveal"><span>Design</span><strong>Shape the system</strong><p>You review a clear feature scope, architecture, delivery plan, and fixed quote.</p></li>
+        <li class="reveal"><span>Build</span><strong>Test in context</strong><p>We develop and validate the system against realistic server behavior and staff roles.</p></li>
+        <li class="reveal"><span>Launch</span><strong>Own the result</strong><p>You receive deployment guidance, source code, documentation, and post-launch support.</p></li>
+      </ol>
+    </section>
+
+    <section class="pricing section" id="pricing">
+      <div class="pricing-intro reveal">
+        <h2>Clear scope. Fixed starting points.</h2>
+        <p>Every build begins with a free Discord consultation. Final pricing reflects your features, integrations, and delivery requirements.</p>
+      </div>
+      <div class="pricing-layout">
+        <article class="featured-plan reveal">
+          <div><span class="plan-name">Pro</span><h3><sup>$</sup>749</h3><p>For established communities that need a complete multi-feature system.</p></div>
+          <ul><li>Up to five custom features</li><li>Persistent database</li><li>Role and permission logic</li><li>One revision round</li><li>30-day support</li><li>Full source code</li></ul>
+          <a class="button" href="https://discord.gg/cordiq" target="_blank" rel="noopener">Start a project</a>
+        </article>
+        <div class="plan-stack">
+          <article class="compact-plan reveal"><div><span class="plan-name">Starter</span><h3><sup>$</sup>299</h3></div><p>A focused bot with one or two custom features and fast delivery.</p><a href="https://discord.gg/cordiq" target="_blank" rel="noopener">Start a project <span aria-hidden="true">↗</span></a></article>
+          <article class="compact-plan reveal"><div><span class="plan-name">Enterprise</span><h3>Custom</h3></div><p>Complex platforms, dashboards, integrations, and multi-server operations.</p><a href="https://discord.gg/cordiq" target="_blank" rel="noopener">Start a project <span aria-hidden="true">↗</span></a></article>
+          <article class="retainer reveal"><strong>Maintenance from $99/month</strong><span>Hosting, monitoring, bug fixes, minor updates, and priority support.</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section" aria-labelledby="reviews-title">
+      <div class="quote-feature reveal">
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <blockquote id="reviews-title">Delivered exactly what I described, ahead of schedule. The system works flawlessly and the code is clean enough to maintain.</blockquote>
+        <cite>Jake M. <span>Gaming community</span></cite>
+      </div>
+      <div class="quote-pair">
+        <figure class="reveal"><blockquote>Fast, communicative, and dependable. The bot has been running for months without an issue.</blockquote><figcaption>Sarah K. <span>Crypto community</span></figcaption></figure>
+        <figure class="reveal"><blockquote>Our tournament workflow now runs from registration through standings without staff chasing spreadsheets.</blockquote><figcaption>RyuGames <span>Esports community</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq">
+      <div class="faq-intro reveal"><span class="eyebrow">Before we start</span><h2>Questions, answered clearly.</h2></div>
       <div class="faq-list">
-        <div class="faq-item" data-r><button class="faq-q" type="button" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">How long does a project take?<span class="faq-ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1" aria-hidden="true"><div class="faq-a-inner">Starter bots: 3–5 days. Pro packages: 7–14 days. Enterprise: 2–4 weeks. You get an exact delivery estimate in your quote before we start.</div></div></div>
-        <div class="faq-item" data-r><button class="faq-q" type="button" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">Do I own the source code?<span class="faq-ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2" aria-hidden="true"><div class="faq-a-inner">Yes, always. You receive the full, clean source code on delivery. No backdoors, no licensing keys, no ongoing dependency on us.</div></div></div>
-        <div class="faq-item" data-r><button class="faq-q" type="button" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">What language or framework do you use?<span class="faq-ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3" aria-hidden="true"><div class="faq-a-inner">Primarily Discord.js with Node.js, and Python when it better suits the project. We match the stack to your requirements and maintenance preferences.</div></div></div>
-        <div class="faq-item" data-r><button class="faq-q" type="button" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">Can you host the bot for me?<span class="faq-ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4" aria-hidden="true"><div class="faq-a-inner">Yes. The maintenance retainer includes hosting, monitoring, bug fixes, and minor updates. You can also host it yourself with the deployment guidance provided.</div></div></div>
-        <div class="faq-item" data-r><button class="faq-q" type="button" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">Do you work with any niche?<span class="faq-ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5" aria-hidden="true"><div class="faq-a-inner">Yes. CordIQ works with gaming, esports, education, business, creator, and specialist communities, adapting each system to the server’s workflows.</div></div></div>
-        <div class="faq-item" data-r><button class="faq-q" type="button" id="faq-q-6" aria-expanded="false" aria-controls="faq-a-6">What if I do not know exactly what I need?<span class="faq-ic" aria-hidden="true">+</span></button><div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6" aria-hidden="true"><div class="faq-a-inner">Describe your server and the problem you are trying to solve. We will help define a practical feature scope around your goals and budget.</div></div></div>
+        <details class="reveal"><summary>How long does a project take?<span>+</span></summary><p>Starter builds usually take 3-5 days, Pro systems 7-14 days, and Enterprise work 2-4 weeks. Your quote includes a delivery estimate.</p></details>
+        <details class="reveal"><summary>Do I own the source code?<span>+</span></summary><p>Yes. You receive the complete source code on delivery with no licensing keys or forced ongoing dependency.</p></details>
+        <details class="reveal"><summary>Can CordIQ host the bot?<span>+</span></summary><p>Yes. The maintenance retainer can include hosting, monitoring, bug fixes, and minor updates. Self-hosting guidance is also available.</p></details>
+        <details class="reveal"><summary>What if the scope is not clear yet?<span>+</span></summary><p>Describe your server and the operational problem. We will help define a practical feature scope around your goals and budget.</p></details>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FINAL CTA -->
-<section class="cta-sec" id="start-project" aria-labelledby="cta-title">
-  <div class="container" data-r>
-    <div class="cta-banner">
-      <div class="cta-glow" aria-hidden="true"></div>
-      <div class="cta-content">
-        <span class="section-label">08 &middot; Start a Project</span>
-        <h2 id="cta-title">Tell us what your server needs.</h2>
-        <p>Share your idea, current challenges, or required systems. We’ll help you define the right solution.</p>
-        <div class="cta-btns">
-          <a href="https://discord.gg/cordiq" class="btn btn-primary" target="_blank" rel="noopener">Start a Project</a>
-          <a href="#work" class="btn btn-ghost">View Our Work</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
+    <section class="final-cta section" id="start-project">
+      <div class="cta-copy reveal"><h2>Build the system your community actually needs.</h2><p>Share the workflow, problem, or idea. We will turn it into a clear technical scope.</p></div>
+      <a class="button button-light reveal" href="https://discord.gg/cordiq" target="_blank" rel="noopener">Start a project <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="foot-inner">
-      <div class="foot-brand">
-        <img src="assets/images/logo/primary_wordmark_light.png" alt="CordIQ" width="880" height="200">
-        <p>Custom Discord systems, automation, integrations, and technical support for communities that want to operate better.</p>
-      </div>
-      <div><div class="foot-heading">Navigate</div><div class="foot-links foot-nav"><a href="#services">Services</a><a href="#process">Process</a><a href="#work">Work</a><a href="#reviews">Reviews</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div></div>
-      <div><div class="foot-heading">Contact</div><div class="foot-links"><a href="https://discord.gg/cordiq" target="_blank" rel="noopener">Start a Project</a><a href="mailto:hello@cordiq.gg">hello@cordiq.gg</a><a href="https://discord.gg/cordiq" target="_blank" rel="noopener">Discord Community</a></div></div>
-    </div>
-    <div class="foot-bottom">
-      <div class="foot-copy">© 2026 CordIQ. All rights reserved.</div>
-      <div class="foot-meta">
-        <a href="mailto:hello@cordiq.gg">Contact</a>
-        <span class="legal-placeholder" aria-disabled="true" title="Privacy page required before launch">Privacy (coming soon)</span>
-        <span class="legal-placeholder" aria-disabled="true" title="Terms page required before launch">Terms (coming soon)</span>
-      </div>
-    </div>
-  </div>
-</footer>
-</div>
+  <footer>
+    <div class="footer-brand"><img src="assets/images/logo/primary_wordmark_light.png" alt="CordIQ" width="880" height="200"><p>Custom Discord systems for communities that need to operate better.</p></div>
+    <div class="footer-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div>
+    <div class="footer-contact"><a href="mailto:hello@cordiq.gg">hello@cordiq.gg</a><a href="https://discord.gg/cordiq" target="_blank" rel="noopener">Discord community</a></div>
+    <div class="footer-bottom"><span>© 2026 CordIQ. All rights reserved.</span><span>Custom systems. Full ownership.</span></div>
+  </footer>
 
-<!-- SCRIPTS -->
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="assets/js/animations.js"></script>
-<script src="assets/js/hero-carousel.js"></script>
-<script src="assets/js/work-carousel.js"></script>
-<script src="assets/js/navigation.js"></script>
-<script src="assets/js/faq.js"></script>
-<script src="assets/js/disclosures.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/js/site-v2.js"></script>
 </body>
 </html>

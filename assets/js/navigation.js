@@ -83,18 +83,17 @@
     });
   }
 
-  let navFrame;
-  window.addEventListener('scroll', () => {
-    if (navFrame) return;
-    navFrame = requestAnimationFrame(() => {
-      updateNavigation();
-      navFrame = null;
-    });
-  }, { passive: true });
+  const navigationScrollTrigger = ScrollTrigger.create({
+    start: 0,
+    end: 'max',
+    onUpdate: updateNavigation,
+  });
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 960 && nav.classList.contains('menu-open')) setMenuOpen(false);
     updateNavigation();
   });
+
+  window.addEventListener('pagehide', () => navigationScrollTrigger.kill(), { once: true });
 
   updateNavigation();

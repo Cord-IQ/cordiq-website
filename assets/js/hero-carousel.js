@@ -1,5 +1,5 @@
 /* HERO PROJECT CAROUSEL */
-  const projectCarousel = document.querySelector('.project-carousel');
+  const projectCarousel = document.querySelector('.project-carousel:not(.project-stack)');
   if (projectCarousel) {
     const projectStage = projectCarousel.querySelector('.project-stage');
     const projectSlides = [...projectCarousel.querySelectorAll('.project-slide')];
@@ -8,7 +8,12 @@
     const projectMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const projectInitialAutoplayDelay = 3000;
     const projectRecurringAutoplayDelay = 4000;
-    let activeProject = 0;
+    const requestedInitialProject = Number.parseInt(projectCarousel.dataset.initialProject || '0', 10);
+    let activeProject = Number.isInteger(requestedInitialProject)
+      && requestedInitialProject >= 0
+      && requestedInitialProject < projectSlides.length
+      ? requestedInitialProject
+      : 0;
     let pointerStartX = 0;
     let pointerStartY = 0;
     let pointerOffset = 0;
@@ -202,5 +207,5 @@
       clearTimeout(projectTransitionTimer);
       projectVisibilityObserver.disconnect();
     }, { once: true });
-    showProject(0, false, true);
+    showProject(activeProject, false, true);
   }

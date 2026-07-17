@@ -15,7 +15,8 @@ if (!reduceSiteMotion) {
   const heroTimeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
   heroTimeline
     .fromTo('.hero-title', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.72 })
-    .fromTo('.hero-sub', { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.58 }, '-=0.46')
+    .fromTo('.hero-supporting', { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.52 }, '-=0.46')
+    .fromTo('.hero-sub', { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.58 }, '-=0.38')
     .fromTo('.hero-ctas', { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.54 }, '-=0.4')
     .fromTo('.project-carousel', { x: 28, opacity: 0 }, { x: 0, opacity: 1, duration: 0.76 }, '-=0.58');
 
