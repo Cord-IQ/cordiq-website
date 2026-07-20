@@ -1,0 +1,70 @@
+---
+import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'CordIQ — Professional Custom Discord Bots',
+  description =
+    'CordIQ builds professional custom Discord bots — moderation, tickets, economy, AI agents and custom integrations. 4+ years of experience. Join our Discord to start your project.',
+} = Astro.props;
+
+const site = 'https://cordiq.xyz';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/brand/Primary_icon.png" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, site).href} />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CordIQ" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, site).href} />
+    <meta property="og:image" content={`${site}/og.jpg`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={`${site}/og.jpg`} />
+    <meta name="theme-color" content="#06080f" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+  </head>
+  <body class="bg-ink-950 text-mist-100 overflow-x-hidden">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:rounded-full focus:bg-brand-500 focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
+    >
+      Skip to content
+    </a>
+    <slot />
+
+    <!-- Scroll-reveal observer -->
+    <script>
+      const els = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (e.isIntersecting) {
+              e.target.classList.add('revealed');
+              io.unobserve(e.target);
+            }
+          }
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      );
+      els.forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>

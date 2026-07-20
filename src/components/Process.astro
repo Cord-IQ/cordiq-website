@@ -1,0 +1,72 @@
+---
+const DISCORD_URL = 'https://discord.gg/W2QqfrgAFC';
+
+const steps = [
+  {
+    n: '01',
+    title: 'Join the Discord',
+    desc: 'Hop into the CordIQ server — it takes ten seconds and it’s where everything happens.',
+  },
+  {
+    n: '02',
+    title: 'Open a ticket',
+    desc: 'Tell us what you’re dreaming of. A private ticket channel opens instantly, just for you.',
+  },
+  {
+    n: '03',
+    title: 'Free consultation',
+    desc: 'We schedule a call, dig into the details together, and hand you a clear scope and quote.',
+  },
+  {
+    n: '04',
+    title: 'We build. You launch.',
+    desc: 'Watch progress in your ticket, test the bot live, and launch with ongoing support behind you.',
+  },
+];
+---
+
+<section id="process" class="relative scroll-mt-24 py-24 md:py-32">
+  <div class="mx-auto max-w-6xl px-5 md:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="reveal inline-block rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-sm font-medium text-brand-300">
+        How it works
+      </span>
+      <h2 class="reveal font-display mt-5 text-3xl font-bold tracking-tight text-balance md:text-5xl" style="--reveal-delay: 80ms">
+        From idea to live bot in <span class="text-gradient">4 steps</span>
+      </h2>
+    </div>
+
+    <ol class="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      {steps.map((s, i) => (
+        <li class="glass-card reveal relative rounded-2xl p-7" style={`--reveal-delay: ${i * 110}ms`}>
+          <span class="font-display text-gradient text-4xl font-bold">{s.n}</span>
+          {i < steps.length - 1 && (
+            <svg
+              class="absolute top-9 -right-4 hidden h-5 w-5 text-brand-500/60 lg:block"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          )}
+          <h3 class="font-display mt-4 text-lg font-semibold text-white">{s.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-mist-300">{s.desc}</p>
+        </li>
+      ))}
+    </ol>
+
+    <div class="reveal mt-12 text-center">
+      <a
+        href={DISCORD_URL}
+        target="_blank"
+        rel="noopener"
+        class="btn-primary inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold text-white"
+      >
+        Take the first step — it&rsquo;s free
+      </a>
+    </div>
+  </div>
+</section>

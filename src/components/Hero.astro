@@ -1,0 +1,114 @@
+---
+const DISCORD_URL = 'https://discord.gg/W2QqfrgAFC';
+
+/* TODO(CordIQ): replace stat values with your real numbers when ready */
+const stats = [
+  { value: '4+', label: 'Years of experience' },
+  { value: '100+', label: 'Bots delivered' },
+  { value: '24/7', label: 'Uptime & support' },
+  { value: '100%', label: 'Custom-built code' },
+];
+---
+
+<section class="relative flex min-h-svh flex-col justify-center overflow-hidden pt-28 pb-16">
+  <!-- Backdrop: brand wave art + grid + glow orbs -->
+  <img
+    src="/visuals/hero-wave.webp"
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover object-bottom opacity-70"
+    width="2000"
+    height="848"
+    fetchpriority="high"
+    aria-hidden="true"
+  />
+  <!-- Contrast scrim so headline stays readable over the art -->
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-ink-950/80 via-ink-950/40 to-ink-950"
+    aria-hidden="true"
+  >
+  </div>
+  <div class="bg-grid absolute inset-0" aria-hidden="true"></div>
+  <div
+    class="animate-pulse-glow absolute -top-40 left-1/2 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-brand-600/25 blur-[140px]"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="absolute top-1/3 -left-40 h-80 w-80 rounded-full bg-accent-500/12 blur-[120px]"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-brand-500/15 blur-[130px]"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="relative mx-auto w-full max-w-6xl px-5 text-center md:px-8">
+    <!-- Badge -->
+    <div class="reveal mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/4 px-4 py-1.5 text-sm text-mist-300 backdrop-blur">
+      <span class="relative flex h-2 w-2">
+        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-400 opacity-60"></span>
+        <span class="relative inline-flex h-2 w-2 rounded-full bg-accent-400"></span>
+      </span>
+      Accepting new projects
+    </div>
+
+    <h1
+      class="reveal font-display mx-auto max-w-4xl text-4xl leading-[1.08] font-bold tracking-tight text-balance sm:text-6xl md:text-7xl"
+      style="--reveal-delay: 80ms"
+    >
+      Custom Discord bots,
+      <span class="text-gradient">engineered to grow</span>
+      your community
+    </h1>
+
+    <p
+      class="reveal mx-auto mt-6 max-w-2xl text-lg text-mist-300 text-pretty md:text-xl"
+      style="--reveal-delay: 160ms"
+    >
+      From smart moderation to AI-powered agents — we design, build and maintain
+      bots tailored to your server. No templates. No limits. Just your idea, shipped.
+    </p>
+
+    <div
+      class="reveal mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row"
+      style="--reveal-delay: 240ms"
+    >
+      <a
+        href={DISCORD_URL}
+        target="_blank"
+        rel="noopener"
+        class="btn-primary inline-flex items-center gap-2.5 rounded-full px-8 py-4 text-base font-semibold text-white"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.32 4.37a19.8 19.8 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+        </svg>
+        Start your project on Discord
+      </a>
+      <a
+        href="#services"
+        class="btn-ghost inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-mist-100"
+      >
+        Explore services
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7-7-7m14-8l-7 7-7-7" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Stats -->
+    <dl
+      class="reveal mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-6 md:grid-cols-4"
+      style="--reveal-delay: 320ms"
+    >
+      {stats.map((s) => (
+        <div class="text-center">
+          <dt class="sr-only">{s.label}</dt>
+          <dd class="font-display text-3xl font-bold text-white md:text-4xl">{s.value}</dd>
+          <dd class="mt-1 text-sm text-mist-500">{s.label}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>

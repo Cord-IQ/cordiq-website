@@ -1,0 +1,70 @@
+---
+const DISCORD_URL = 'https://discord.gg/W2QqfrgAFC';
+
+const faqs = [
+  {
+    q: 'How much does a custom Discord bot cost?',
+    a: 'It depends on complexity. Simple moderation or utility bots start around $75, ticket and engagement systems from $100–$150, AI-powered bots from $250, and full custom integrations with dashboards from $400. Every project gets an exact, no-surprises quote during your free consultation — before any commitment.',
+  },
+  {
+    q: 'How long does development take?',
+    a: 'Most bots ship within 3–10 days depending on scope. Larger projects with dashboards or complex integrations can take 2–4 weeks. You get a clear timeline in your quote, and you can follow progress live in your private ticket channel.',
+  },
+  {
+    q: 'How do I place an order?',
+    a: 'Everything happens on our Discord server: join, open a ticket, and we schedule a free consultation to discuss your project in detail. Once we agree on scope, price and timeline, development starts.',
+  },
+  {
+    q: 'Do you host the bot, or do I?',
+    a: 'Your choice. We offer managed 24/7 cloud hosting with monitoring and maintenance from $19/mo — or we hand over the full source code and help you deploy on your own infrastructure.',
+  },
+  {
+    q: 'Do I own the code?',
+    a: 'Yes. Once your project is paid in full, the code is yours. No lock-in, no subscriptions required to keep what you paid for.',
+  },
+  {
+    q: 'What about revisions and bugs after delivery?',
+    a: 'Every project includes free bug fixes after delivery, and revision rounds are agreed in your quote. With a maintenance plan, we also handle Discord API changes and updates long-term.',
+  },
+  {
+    q: 'Can you update or fix a bot another developer built?',
+    a: 'Usually, yes. Open a ticket with details about the existing bot and we’ll review the code and tell you honestly whether it’s better to repair or rebuild.',
+  },
+];
+---
+
+<section id="faq" class="relative scroll-mt-24 bg-ink-900/50 py-24 md:py-32">
+  <div class="mx-auto max-w-3xl px-5 md:px-8">
+    <div class="text-center">
+      <span class="reveal inline-block rounded-full border border-accent-400/30 bg-accent-400/10 px-4 py-1.5 text-sm font-medium text-accent-300">
+        FAQ
+      </span>
+      <h2 class="reveal font-display mt-5 text-3xl font-bold tracking-tight text-balance md:text-5xl" style="--reveal-delay: 80ms">
+        Questions? <span class="text-gradient">Answered.</span>
+      </h2>
+    </div>
+
+    <div class="mt-12 space-y-3">
+      {faqs.map((f, i) => (
+        <details class="faq-item glass-card reveal group rounded-2xl" style={`--reveal-delay: ${i * 60}ms`}>
+          <summary class="flex cursor-pointer items-center justify-between gap-4 p-6 font-medium text-white select-none">
+            <span class="font-display">{f.q}</span>
+            <span class="faq-icon inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/4 text-mist-300">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" d="M12 5v14M5 12h14" />
+              </svg>
+            </span>
+          </summary>
+          <p class="px-6 pb-6 text-sm leading-relaxed text-mist-300">{f.a}</p>
+        </details>
+      ))}
+    </div>
+
+    <p class="reveal mt-10 text-center text-mist-300">
+      Still curious?
+      <a href={DISCORD_URL} target="_blank" rel="noopener" class="font-semibold text-brand-300 underline-offset-4 hover:underline">
+        Ask us directly on Discord →
+      </a>
+    </p>
+  </div>
+</section>

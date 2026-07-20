@@ -1,0 +1,63 @@
+---
+const DISCORD_URL = 'https://discord.gg/W2QqfrgAFC';
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/6 bg-ink-900/70">
+  <div class="mx-auto max-w-6xl px-5 py-14 md:px-8">
+    <div class="flex flex-col items-start justify-between gap-10 md:flex-row">
+      <div class="max-w-sm">
+        <a href="/" class="inline-flex items-center gap-2.5" aria-label="CordIQ home">
+          <img src="/brand/Primary_no_bg_icon.png" alt="" class="h-9 w-9" width="36" height="36" />
+          <span class="font-display text-xl font-bold tracking-tight">
+            Cord<span class="text-brand-400">IQ</span>
+          </span>
+        </a>
+        <p class="mt-4 text-sm leading-relaxed text-mist-500">
+          Professional custom Discord bots — designed, built and maintained by
+          two developers who’ve lived and breathed Discord for 4+ years.
+        </p>
+      </div>
+
+      <nav class="grid grid-cols-2 gap-10 sm:grid-cols-3" aria-label="Footer">
+        <div>
+          <h3 class="font-display text-sm font-semibold text-white">Site</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-mist-500">
+            <li><a href="#services" class="transition-colors hover:text-white">Services</a></li>
+            <li><a href="#why" class="transition-colors hover:text-white">Why CordIQ</a></li>
+            <li><a href="#process" class="transition-colors hover:text-white">Process</a></li>
+            <li><a href="#work" class="transition-colors hover:text-white">Our Work</a></li>
+            <li><a href="#faq" class="transition-colors hover:text-white">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-sm font-semibold text-white">Connect</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-mist-500">
+            <li>
+              <a href={DISCORD_URL} target="_blank" rel="noopener" class="transition-colors hover:text-white">
+                Discord server
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contact@cordiq.xyz" class="transition-colors hover:text-white">
+                contact@cordiq.xyz
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-sm font-semibold text-white">Legal</h3>
+          <ul class="mt-4 space-y-2.5 text-sm text-mist-500">
+            <li><a href="/terms" class="transition-colors hover:text-white">Terms of Service</a></li>
+            <li><a href="/privacy" class="transition-colors hover:text-white">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/6 pt-8 text-sm text-mist-500 sm:flex-row">
+      <p>© {year} CordIQ. All rights reserved.</p>
+      <p class="text-xs">Not affiliated with Discord Inc.</p>
+    </div>
+  </div>
+</footer>
