@@ -1,6 +1,9 @@
 ---
 const DISCORD_URL = 'https://discord.gg/W2QqfrgAFC';
 const year = new Date().getFullYear();
+
+/* Anchors only resolve on the homepage, so prefix them elsewhere. */
+const base = Astro.url.pathname === '/' ? '' : '/';
 ---
 
 <footer class="border-t border-white/6 bg-ink-900/70">
@@ -27,11 +30,12 @@ const year = new Date().getFullYear();
         <div>
           <h3 class="font-display text-sm font-semibold text-white">Site</h3>
           <ul class="mt-4 space-y-2.5 text-sm text-mist-500">
-            <li><a href="#services" class="transition-colors hover:text-white">Services</a></li>
-            <li><a href="#why" class="transition-colors hover:text-white">Why CordIQ</a></li>
-            <li><a href="#process" class="transition-colors hover:text-white">Process</a></li>
-            <li><a href="#work" class="transition-colors hover:text-white">Our Work</a></li>
-            <li><a href="#faq" class="transition-colors hover:text-white">FAQ</a></li>
+            <li><a href={`${base}#services`} class="transition-colors hover:text-white">Services</a></li>
+            <li><a href="/pricing" class="transition-colors hover:text-white">Pricing</a></li>
+            <li><a href={`${base}#why`} class="transition-colors hover:text-white">Why CordIQ</a></li>
+            <li><a href={`${base}#process`} class="transition-colors hover:text-white">Process</a></li>
+            <li><a href={`${base}#work`} class="transition-colors hover:text-white">Our Work</a></li>
+            <li><a href={`${base}#faq`} class="transition-colors hover:text-white">FAQ</a></li>
           </ul>
         </div>
         <div>

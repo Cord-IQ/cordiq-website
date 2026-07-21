@@ -1,0 +1,241 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Packages from '../components/Packages.astro';
+import Footer from '../components/Footer.astro';
+import { packages, carePlan, comparison } from '../data/packages';
+
+const DISCORD_URL = 'https://discord.gg/W2QqfrgAFC';
+const site = 'https://cordiq.xyz';
+
+const pricingFaqs = [
+  {
+    q: 'How much does a custom Discord bot cost?',
+    a: `Our packages start at $${packages[0].price} for a core bot, $${packages[1].price} once you need a database and systems like tickets or economy, and $${packages[2].price} for AI, dashboards and monetization. Every project is quoted exactly in a free consultation before you commit to anything.`,
+  },
+  {
+    q: 'Why packages instead of a price per bot type?',
+    a: 'Because cost is driven by what a bot has to do, not what you call it. A "moderation bot" that stores warnings in a database is more work than a simple economy bot. Pricing by capability means the quote reflects the actual build.',
+  },
+  {
+    q: 'What if I need features from a higher package?',
+    a: 'Mix and match freely. Packages are starting points, not cages. If you need one dashboard feature on an otherwise Growth build, we price that build specifically - you never jump a whole tier for a single feature.',
+  },
+  {
+    q: 'Is the price fixed, or does it change later?',
+    a: 'The quote you agree to in your ticket is the price. It only changes if you ask for extra scope, and we tell you the cost before doing the work. No surprise invoices.',
+  },
+  {
+    q: 'Do I have to buy the Care Plan?',
+    a: `No. The Care Plan is optional and starts at $${carePlan.price}${carePlan.unit}. You can take the source code and host the bot yourself - we will help you deploy it either way.`,
+  },
+  {
+    q: 'Do I own the code?',
+    a: 'Yes. Once your project is paid in full the code is yours, on every package. No lock-in and no subscription needed to keep what you paid for.',
+  },
+];
+
+/* --- Structured data: helps Google understand and surface the offers --- */
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Custom Discord Bot Development',
+  serviceType: 'Discord bot development',
+  url: `${site}/pricing`,
+  provider: {
+    '@type': 'Organization',
+    name: 'CordIQ',
+    url: site,
+    logo: `${site}/brand/wordmark-light.webp`,
+    email: 'contact@cordiq.xyz',
+  },
+  areaServed: 'Worldwide',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Discord bot development packages',
+    itemListElement: packages.map((p) => ({
+      '@type': 'Offer',
+      name: p.name,
+      description: `${p.tagline} ${p.features.join('. ')}.`,
+      priceCurrency: 'USD',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        minPrice: p.price,
+        priceCurrency: 'USD',
+        valueAddedTaxIncluded: false,
+      },
+      availability: 'https://schema.org/InStock',
+      url: `${site}/pricing`,
+    })),
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: pricingFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const tiers = ['starter', 'growth', 'scale'] as const;
+---
+
+<Layout
+  title="Discord Bot Development Pricing - CordIQ"
+  description={`Transparent custom Discord bot pricing. Packages from $${packages[0].price} for core builds, $${packages[1].price} with database and systems, $${packages[2].price} with AI and web dashboards. Free consultation, exact quote, no surprises.`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} is:inline />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} is:inline />
+
+  <Nav />
+  <main id="main">
+    <!-- Page header -->
+    <section class="relative overflow-hidden pt-36 pb-4 md:pt-40">
+      <div
+        class="absolute -top-32 left-1/2 h-96 w-[720px] -translate-x-1/2 rounded-full bg-brand-600/20 blur-[140px]"
+        aria-hidden="true"
+      >
+      </div>
+      <div class="relative mx-auto max-w-3xl px-5 text-center md:px-8">
+        <h1 class="font-display text-4xl font-bold tracking-tight text-balance md:text-6xl">
+          Pricing built around <span class="text-brand-400">what your bot does</span>
+        </h1>
+        <p class="mx-auto mt-5 max-w-2xl text-lg text-mist-300 text-pretty">
+          No per-hour guessing and no vague "contact us". Pick the capability level
+          you need, get an exact quote in a free consultation, then we build.
+        </p>
+      </div>
+    </section>
+
+    <Packages
+      showCompareLink={false}
+      heading="Three levels. One honest quote."
+      intro="Every package is a starting point - we quote your exact build in your ticket before any commitment."
+    />
+
+    <!-- Full comparison -->
+    <section class="relative bg-ink-900/50 py-24 md:py-32">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="reveal inline-block rounded-full border border-accent-400/30 bg-accent-400/10 px-4 py-1.5 text-sm font-medium text-accent-300">
+            Compare
+          </span>
+          <h2 class="reveal font-display mt-5 text-3xl font-bold tracking-tight text-balance md:text-5xl" style="--reveal-delay: 80ms">
+            Every feature, <span class="text-brand-400">side by side</span>
+          </h2>
+        </div>
+
+        <!-- Table scrolls inside its own container so the page never does -->
+        <div class="reveal mt-12 -mx-5 overflow-x-auto px-5 md:mx-0 md:px-0">
+          <table class="w-full min-w-[640px] border-collapse text-left">
+            <caption class="sr-only">
+              Feature comparison of the Starter, Growth and Scale Discord bot packages
+            </caption>
+            <thead>
+              <tr class="border-b border-white/10">
+                <th scope="col" class="w-2/5 py-4 pr-4 text-sm font-medium text-mist-500">
+                  Feature
+                </th>
+                {packages.map((p) => (
+                  <th scope="col" class="px-4 py-4 text-center">
+                    <span class="font-display block text-base font-semibold text-white">{p.name}</span>
+                    <span class="mt-0.5 block text-sm text-mist-500 tabular-nums">from ${p.price}</span>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {comparison.map((group) => (
+                <>
+                  <tr>
+                    <th
+                      scope="colgroup"
+                      colspan="4"
+                      class="pt-8 pb-3 text-sm font-semibold tracking-wide text-brand-300 uppercase"
+                    >
+                      {group.group}
+                    </th>
+                  </tr>
+                  {group.rows.map((row) => (
+                    <tr class="border-b border-white/6">
+                      <th scope="row" class="py-3.5 pr-4 text-sm font-normal text-mist-300">
+                        {row.label}
+                      </th>
+                      {tiers.map((t) => (
+                        <td class="px-4 py-3.5 text-center">
+                          {typeof row[t] === 'string' ? (
+                            <span class="text-sm text-white">{row[t]}</span>
+                          ) : row[t] ? (
+                            <>
+                              <svg class="mx-auto h-5 w-5 text-accent-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                              </svg>
+                              <span class="sr-only">Included</span>
+                            </>
+                          ) : (
+                            <>
+                              <span class="mx-auto block h-px w-4 bg-white/20" aria-hidden="true"></span>
+                              <span class="sr-only">Not included</span>
+                            </>
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing FAQ -->
+    <section class="relative py-24 md:py-32">
+      <div class="mx-auto max-w-3xl px-5 md:px-8">
+        <div class="text-center">
+          <span class="reveal inline-block rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-sm font-medium text-brand-300">
+            Pricing FAQ
+          </span>
+          <h2 class="reveal font-display mt-5 text-3xl font-bold tracking-tight text-balance md:text-5xl" style="--reveal-delay: 80ms">
+            The money questions, <span class="text-brand-400">answered</span>
+          </h2>
+        </div>
+
+        <div class="mt-12 space-y-3">
+          {pricingFaqs.map((f, i) => (
+            <details class="faq-item glass-card reveal group rounded-2xl" style={`--reveal-delay: ${i * 60}ms`}>
+              <summary class="flex cursor-pointer items-center justify-between gap-4 p-6 font-medium text-white select-none">
+                <span class="font-display">{f.q}</span>
+                <span class="faq-icon inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/4 text-mist-300">
+                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" d="M12 5v14M5 12h14" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="px-6 pb-6 text-sm leading-relaxed text-mist-300">{f.a}</p>
+            </details>
+          ))}
+        </div>
+
+        <div class="reveal mt-12 text-center">
+          <a
+            href={DISCORD_URL}
+            target="_blank"
+            rel="noopener"
+            class="btn-primary inline-flex items-center gap-2.5 rounded-full px-8 py-4 font-semibold text-white"
+          >
+            Get your exact quote - free
+          </a>
+          <p class="mt-4 text-sm text-mist-500">
+            Open a ticket on Discord. No commitment, no sales pressure.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,12 +1,18 @@
 ---
 const DISCORD_URL = 'https://discord.gg/W2QqfrgAFC';
 
+/* On the homepage these are in-page anchors; elsewhere they need to
+   point back to "/" first, otherwise "#services" resolves nowhere. */
+const isHome = Astro.url.pathname === '/';
+const base = isHome ? '' : '/';
+
 const links = [
-  { href: '#services', label: 'Services' },
-  { href: '#why', label: 'Why CordIQ' },
-  { href: '#process', label: 'Process' },
-  { href: '#work', label: 'Our Work' },
-  { href: '#faq', label: 'FAQ' },
+  { href: `${base}#services`, label: 'Services' },
+  { href: `${base}#pricing`, label: 'Pricing' },
+  { href: `${base}#why`, label: 'Why CordIQ' },
+  { href: `${base}#process`, label: 'Process' },
+  { href: `${base}#work`, label: 'Our Work' },
+  { href: `${base}#faq`, label: 'FAQ' },
 ];
 ---
 

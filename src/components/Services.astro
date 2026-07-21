@@ -1,42 +1,35 @@
 ---
 const DISCORD_URL = 'https://discord.gg/W2QqfrgAFC';
 
-/* Pricing derived from 2026 market research - adjust anytime */
+/* Capability showcase - no prices here. Pricing lives in src/data/packages.ts */
 const services = [
   {
     title: 'Moderation & Server Management',
-    price: 'from $75',
     desc: 'Auto-mod, anti-spam & anti-raid, word filters, warnings, full audit logging, welcome flows and reaction roles - your server on autopilot.',
     icon: 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z',
   },
   {
     title: 'Ticket & Support Systems',
-    price: 'from $100',
     desc: 'Ticket panels, private support channels, transcripts, staff routing and SLA pings - professional support for communities and stores.',
     icon: 'M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 20.25l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z',
   },
   {
     title: 'Economy, Leveling & Engagement',
-    price: 'from $150',
     desc: 'Custom economies with shops and trading, XP systems with rank cards, giveaways, events and mini-games that keep members coming back.',
     icon: 'M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941',
   },
   {
     title: 'AI-Powered Bots',
-    price: 'from $250',
     desc: 'AI chat companions, knowledge-based support agents trained on your docs, smart auto-moderation and workflow automation - the 2026 edge.',
     icon: 'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z',
-    featured: true,
   },
   {
     title: 'Custom Integrations & Dashboards',
-    price: 'from $400',
     desc: 'Payment gateways, third-party APIs, webhooks, databases and full web dashboards - your bot wired into everything you run.',
     icon: 'M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .37-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z',
   },
   {
     title: 'Hosting & Maintenance',
-    price: 'from $19/mo',
     desc: '24/7 cloud hosting, monitoring, bug fixes and Discord API updates handled for you. Your bot stays online - you stay focused.',
     icon: 'M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z',
   },
@@ -59,25 +52,17 @@ const services = [
         Any bot you can imagine. <span class="text-brand-400">Built right.</span>
       </h2>
       <p class="reveal mt-4 text-lg text-mist-300" style="--reveal-delay: 160ms">
-        Every project is coded from scratch for your exact needs - and every quote is
-        tailored in a free consultation on our Discord.
+        Every project is coded from scratch for your exact needs. Mix and match
+        anything below - your package is priced by what your bot has to do.
       </p>
     </div>
 
     <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {services.map((s, i) => (
         <article
-          class:list={[
-            'glass-card reveal group relative flex flex-col rounded-2xl p-7',
-            s.featured && 'ring-1 ring-brand-500/40',
-          ]}
+          class="glass-card reveal group relative flex flex-col rounded-2xl p-7"
           style={`--reveal-delay: ${(i % 3) * 90}ms`}
         >
-          {s.featured && (
-            <span class="absolute -top-3 right-6 rounded-full bg-gradient-to-r from-brand-500 to-accent-500 px-3 py-1 text-xs font-semibold text-white">
-              Most popular
-            </span>
-          )}
           <div class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-500/25 bg-brand-500/10 text-brand-300 transition-colors group-hover:text-accent-300">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d={s.icon} />
@@ -85,7 +70,6 @@ const services = [
           </div>
           <h3 class="font-display text-lg font-semibold text-white">{s.title}</h3>
           <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist-300">{s.desc}</p>
-          <p class="mt-5 font-mono text-sm font-medium text-accent-400">{s.price}</p>
         </article>
       ))}
     </div>
