@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* CordIQ brand — derived from logo */
+  /* CordIQ brand - derived from logo */
   --color-brand-50: #eef0fe;
   --color-brand-100: #dfe1fc;
   --color-brand-200: #c5c8fa;
@@ -129,7 +129,7 @@ summary {
   transform: translateY(-2px);
 }
 
-/* Scroll reveal — the observer script in Layout.astro adds .revealed.
+/* Scroll reveal - the observer script in Layout.astro adds .revealed.
    Hidden state only applies when JS is running (html.js), so content is
    never invisible for no-JS visitors or if the script fails. */
 html.js .reveal {
