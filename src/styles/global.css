@@ -51,6 +51,10 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  /* Safety net: a stray decorative glow can never create page-level
+     horizontal scroll. `clip` (not `hidden`) avoids making the root a
+     scroll container, so sticky/anchoring still work. */
+  overflow-x: clip;
   background-color: var(--color-ink-950);
   color: var(--color-mist-100);
   font-family: var(--font-sans);
